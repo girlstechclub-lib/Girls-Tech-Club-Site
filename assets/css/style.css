@@ -1,0 +1,131 @@
+body{font-family:Arial;}
+.navbar .nav-link.active{color:#6f42c1!important;font-weight:bold;}
+:root {
+  --gtc-primary: #F20D0D;
+  --gtc-secondary: #D9D9D9;
+  --gtc-dark: #212529;
+  --gtc-text: #555;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--gtc-text);
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--gtc-dark);
+}
+
+.text-primary,
+.navbar-brand,
+.section-title {
+  color: var(--gtc-primary) !important;
+}
+
+.navbar-logo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.btn-primary {
+  background-color: var(--gtc-primary);
+  border-color: var(--gtc-primary);
+}
+
+.btn-primary:hover {
+  background-color: #5f36aa;
+  border-color: #5f36aa;
+}
+
+.btn-outline-primary {
+  color: var(--gtc-primary);
+  border-color: var(--gtc-primary);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--gtc-primary);
+  border-color: var(--gtc-primary);
+}
+
+.hero-section {
+  background: linear-gradient(rgba(248, 244, 255, 0.95), rgba(248, 244, 255, 0.95));
+}
+
+.page-header {
+  background-color: var(--gtc-secondary);
+  padding: 80px 0;
+}
+
+.section-padding {
+  padding: 80px 0;
+}
+
+.card {
+  border: none;
+  border-radius: 14px;
+}
+
+.card img {
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+}
+
+.shadow-soft {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.footer-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.navbar .nav-link {
+  color: #333;
+  margin-left: 10px;
+  transition: 0.2s ease;
+}
+
+.navbar .nav-link:hover {
+  color: var(--gtc-primary);
+}
+
+.navbar .nav-link.active {
+  color: var(--gtc-primary) !important;
+}
+
+.stat-box {
+  background: #fff;
+  border-radius: 14px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.stat-box h3 {
+  color: var(--gtc-primary);
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.cta-box {
+  background: var(--gtc-primary);
+  color: #fff;
+  border-radius: 18px;
+  padding: 50px 30px;
+}
+
+.cta-box h2,
+.cta-box p {
+  color: #fff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
