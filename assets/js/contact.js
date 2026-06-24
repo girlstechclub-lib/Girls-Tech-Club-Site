@@ -1,4 +1,4 @@
-const CONTACT_GOOGLE_SHEET_WEB_APP_URL = "https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec";
+const CONTACT_GOOGLE_SHEET_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwqHtDGBqB4cjL5leq4tEp7C8MYlIdBXx5b9JmBySquLCtjwdF7n4jkznMQ1j9mTH7ndA/exec";
 
 const CONTACT_GOOGLE_SHEET_ID = "1eNAqL70MDqGDoqubCn9X7AfY6jYk01mFEyoGCYSajbk";
 
@@ -22,20 +22,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const formData = new FormData(form);
-    const payload = {
-      firstName: formData.get("firstName")?.toString().trim() || "",
-      lastName: formData.get("lastName")?.toString().trim() || "",
-      email: formData.get("email")?.toString().trim() || "",
-      subject: formData.get("subject")?.toString().trim() || "",
-      message: formData.get("message")?.toString().trim() || "",
-      timestamp: new Date().toISOString(),
-    };
+    const payload = new URLSearchParams();
+    payload.append("firstName", formData.get("firstName")?.toString().trim() || "");
+    payload.append("lastName", formData.get("lastName")?.toString().trim() || "");
+    payload.append("email", formData.get("email")?.toString().trim() || "");
+    payload.append("subject", formData.get("subject")?.toString().trim() || "");
+    payload.append("message", formData.get("message")?.toString().trim() || "");
+    payload.append("timestamp", new Date().toISOString());
 
     try {
       const response = await fetch(CONTACT_GOOGLE_SHEET_WEB_APP_URL, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        body: payload,
       });
 
       if (!response.ok) {
