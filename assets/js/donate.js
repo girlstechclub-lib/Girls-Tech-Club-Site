@@ -22,19 +22,17 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const formData = new FormData(form);
-    const payload = {
-      name: formData.get("fullName")?.toString().trim() || "",
-      email: formData.get("email")?.toString().trim() || "",
-      amount: formData.get("donationAmount")?.toString().trim() || "",
-      message: formData.get("message")?.toString().trim() || "",
-      timestamp: new Date().toISOString(),
-    };
+    const payload = new URLSearchParams();
+    payload.append("name", formData.get("fullName")?.toString().trim() || "");
+    payload.append("email", formData.get("email")?.toString().trim() || "");
+    payload.append("amount", formData.get("donationAmount")?.toString().trim() || "");
+    payload.append("message", formData.get("message")?.toString().trim() || "");
+    payload.append("timestamp", new Date().toISOString());
 
     try {
       const response = await fetch(GOOGLE_SHEETS_WEB_APP_URL, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        body: payload,
       });
 
       if (!response.ok) {
