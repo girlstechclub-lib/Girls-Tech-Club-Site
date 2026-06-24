@@ -25,6 +25,20 @@ A static website for Girls Tech Club, a Liberia-based youth organization that em
 
 This project can be hosted on GitHub Pages by enabling Pages in the repository settings and setting the source to the root branch.
 
+## Pretty URLs
+
+The site now uses directory-based pretty URLs for main pages, for example:
+
+- `/donate/`
+- `/contact/`
+- `/programs/`
+- `/events/`
+- `/about/`
+- `/get-involved/`
+- `/blog/`
+
+Each of those directories contains an `index.html`, so visitors do not need to use `.html` in the URL.
+
 ## Notes
 
 The contact and donate forms submit to Google Apps Script endpoints that save form responses into Google Sheets. Ensure the Apps Script deployments are configured with "Execute as: Me" and "Who has access: Anyone" if you want the forms to work publicly.
