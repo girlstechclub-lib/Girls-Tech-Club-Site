@@ -1,5 +1,5 @@
 const GOOGLE_SHEETS_SPREADSHEET_ID = "1FxbelxYvuClXnlN5JnhgmllrmcPm5gPYeYkFi_mm0vc";
-const GOOGLE_SHEETS_WEB_APP_URL = "https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec";
+const GOOGLE_SHEETS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyEyDGqGctY_rxzDlfRhhPzeenJTOeunue1pZQBAA4DjwLaOpYoPL9Dq19-71It2LhMZg/exec";
 
 // Deploy a Google Apps Script Web App bound to the spreadsheet above,
 // then replace the placeholder URL with the deployed web app URL.
